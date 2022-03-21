@@ -4,6 +4,9 @@ import com.pluralsight.bdd.calculator.Calculator;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
+import java.sql.SQLException;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CalculatorStepDefinitions {
@@ -15,7 +18,7 @@ public class CalculatorStepDefinitions {
     }
 
     @When("I add {int} and {int}")
-    public void i_add_and(Integer int1, Integer int2) {
+    public void i_add_and(Integer int1, Integer int2) throws SQLException {
         result = calculator.add(int1,int2);
     }
 

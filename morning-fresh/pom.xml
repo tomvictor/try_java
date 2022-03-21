@@ -52,8 +52,8 @@
                 <version>3.8.0</version>
                 <configuration>
                     <encoding>UTF-8</encoding>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>10</source>
+                    <target>10</target>
                     <compilerArgument>-Werror</compilerArgument>
                 </configuration>
             </plugin>

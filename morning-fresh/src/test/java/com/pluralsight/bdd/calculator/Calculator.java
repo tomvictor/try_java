@@ -1,13 +1,15 @@
 package com.pluralsight.bdd.calculator;
 
-public class Calculator {
-    public Integer add(Integer int1, Integer int2) {
+import java.sql.SQLException;
 
-        MySQLHandler dbHandle = new MySQLHandler(
+public class Calculator {
+    public Integer add(Integer int1, Integer int2) throws SQLException {
+
+        DataHandler dbHandle = new DataHandler(
                 "jdbc:mysql://127.0.0.1:3306/tom", "root", "test"
         );
-        System.out.println(dbHandle.filterMetaDataCount("Don"));
-        
+        System.out.println(dbHandle.countRecordsWithIdentifier("mkyong"));
+
         return int1 + int2;
     }
 }
